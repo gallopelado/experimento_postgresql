@@ -22,7 +22,7 @@ CREATE TRIGGER actualiza_paquete_tr AFTER UPDATE OF cantidad_dispensada_paquete
 	EXECUTE PROCEDURE actualiza_paquete();
 	
 --Prueba
-UPDATE public.hospitalario_solicitud_medicamentos SET cantidad_dispensada_paquete=15 
+UPDATE public.hospitalario_solicitud_medicamentos SET cantidad_dispensada_paquete=15
 WHERE codigo_establecimiento='0003000.00010101' AND codigo_solicitud_medicamentos='SM00000001'
 AND solicitud_fecha='2020-08-25' AND orden=2;
 

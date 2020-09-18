@@ -8,7 +8,7 @@ BEGIN
 			--Actualizar estado a Preparando
 			v_estado := 'En Proceso';
 		
-		WHEN NEW.cantidad_dispensada BETWEEN 0 AND OLD.numero_total THEN
+		WHEN NEW.cantidad_dispensada > 0 AND NEW.cantidad_dispensada < OLD.numero_total THEN
 			v_estado := 'Preparando';
 			
 		WHEN NEW.cantidad_dispensada = OLD.numero_total THEN
